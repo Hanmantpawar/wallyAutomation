@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [WallySuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="fleetwally.wally.testclass.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="fleetwally.wally.LoginValidation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchApplication"/>
+          <include name="LoginErrorMessage" invocation-numbers="1 2"/>
+        </methods>
+      </class> <!-- fleetwally.wally.LoginValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [WallySuite] -->
