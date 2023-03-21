@@ -1,26 +1,35 @@
 package fleetwally.wally.testclass;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+import fleetwally.wally.SignupPage;
 import fleetwally.wally.loginPage;
+import fleetwally.wally.signout;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestClass {
 	public WebDriver driver;
 	public loginPage logpag;
-
+	public signout signoutApp;
+	public SignupPage sp; 
+	
+@BeforeSuite
 	public WebDriver initalizeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
@@ -40,6 +49,7 @@ public class BaseTestClass {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
+		driver.get("https://app.wallyax.com/");
 		return driver;
 
 	}
@@ -53,16 +63,16 @@ public class BaseTestClass {
 		return System.getProperty("user.dir") + "//reports//" + TestCaseName + ".png";
 	}
 
-	@BeforeMethod
-	public loginPage launchApplication() throws IOException {
-		driver = initalizeDriver();
+	@BeforeClass 
+	public void createobject() {
+		
 		logpag = new loginPage(driver);
-		logpag.launchUrl();
-		return logpag;
+		signoutApp = new signout(driver);
+		sp = new SignupPage(driver);
 	}
-
-	@AfterMethod
+	
+	@AfterSuite
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	}
 }

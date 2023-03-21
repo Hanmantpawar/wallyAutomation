@@ -11,22 +11,22 @@ public class loginPage{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	//Launch WebSite
-	public void launchUrl() {
-	driver.get("https://app.wallyax.com/login");
 	
-	}
 	//Declared all Webelements
+	@FindBy (xpath = "//*[@class='md:text-lg text-xs font-normal border-solid border-4 border-black md:px-6 px-2 md:py-1 py-1 md:mr-5 mr-2 whitespace-pre signIn']")
+			WebElement LoginButton;
 	@FindBy (xpath ="//*[@id='username']")  WebElement userName;
 	@FindBy (xpath = "//*[@id='password']") WebElement password;
 	@FindBy (xpath = "//button[@type='submit']") WebElement submitButton;
 	@FindBy (xpath = "//*[@class='text-sm text-left text-black font-light']") WebElement loginFailedError;
+
 	
-	public void loginApplication(String user,String pass) {
+	public void loginApplication(String user,String pass) throws InterruptedException {
 		
 		userName.sendKeys(user);
 		password.sendKeys(pass);
 		submitButton.click();
+		Thread.sleep(5000);
 	}
 	
 	public String ErrorMessage() {

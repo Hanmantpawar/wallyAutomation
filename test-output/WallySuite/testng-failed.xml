@@ -9,8 +9,9 @@
       <class name="fleetwally.wally.LoginValidation">
         <methods>
           <include name="closeBrowser"/>
-          <include name="launchApplication"/>
-          <include name="LoginErrorMessage" invocation-numbers="1 2"/>
+          <include name="initalizeDriver"/>
+          <include name="singupApplication" invocation-numbers="0"/>
+          <include name="createobject"/>
         </methods>
       </class> <!-- fleetwally.wally.LoginValidation -->
     </classes>
