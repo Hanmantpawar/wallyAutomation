@@ -24,7 +24,7 @@ import fleetwally.wally.signout;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestClass {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public loginPage logpag;
 	public signout signoutApp;
 	public SignupPage sp; 
@@ -73,6 +73,6 @@ public class BaseTestClass {
 	
 	@AfterSuite
 	public void closeBrowser() {
-		driver.quit();
+	//	driver.quit();
 	}
 }

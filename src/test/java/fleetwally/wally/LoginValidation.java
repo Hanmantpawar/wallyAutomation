@@ -30,7 +30,8 @@ public class LoginValidation extends BaseTestClass {
 		sp.SignupFunction(inputData.get("First Name"),
 				inputData.get("Last Name"),
 				inputData.get("email"),
-				inputData.get("Compamy")
+				inputData.get("Compamy"),
+				inputData.get("phone")
 				);		
 	}
 	
@@ -40,8 +41,9 @@ public class LoginValidation extends BaseTestClass {
 		HashMap<String, String> data = new HashMap<String, String>();
 		data.put("First Name", "Hanmant ");
 		data.put("Last Name", "Pawar ");
-		data.put("email", "hpawar@fleetstudio.com ");
-		data.put("Compamy", "Fleetstudio");
+		data.put("email", "hpawar+1@fleetstudio.com ");
+		data.put("Compamy", "Fleet Studio Technology");
+		data.put("phone", "9876543210");
 		
 		return new Object[][] { { data }};
 		

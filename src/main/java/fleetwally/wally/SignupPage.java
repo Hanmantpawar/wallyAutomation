@@ -1,4 +1,5 @@
 package fleetwally.wally;
+import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class SignupPage {
 	WebDriver driver;
 	Select s;
+	JavascriptExecutor js;
+	
 	public SignupPage(WebDriver driver)
 	{
 		this.driver =driver;
@@ -30,18 +34,18 @@ public class SignupPage {
 	@FindBy (xpath = "//*[@class='text-md mr-10 cursor-pointer ']") WebElement Websites;
 	@FindBy(xpath = "//input[@value='SUBMIT']") WebElement SubmitButton;
 	
-	public void SignupFunction(String Fname,String Lname,String email,String company) throws InterruptedException {
-		
+	public void SignupFunction(String Fname,String Lname,String email,String company,String phone) throws InterruptedException {
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		GetStarted.click();
 		FirstName.sendKeys(Fname);
 		LastName.sendKeys(Lname);	
 		Email.sendKeys(email);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js = (JavascriptExecutor) driver;
 	    js.executeScript("window.scrollBy(0,400)", "");
-	    Thread.sleep(2000);
+	   Thread.sleep(2000);
 	    countryFlag.click();
 	    country.click();
-	    phoneNumber.sendKeys("9876543210");   
+	    phoneNumber.sendKeys(phone);   
 		Thread.sleep(2000);
 		s = new Select(Role);
 		s.selectByVisibleText("Software Engineer");	

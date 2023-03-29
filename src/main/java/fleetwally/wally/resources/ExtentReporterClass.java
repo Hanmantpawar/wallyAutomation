@@ -9,9 +9,7 @@ public class ExtentReporterClass {
 		String path = System.getProperty("user.dir")+"\\reports\\index.html";
 		ExtentSparkReporter reporter= new ExtentSparkReporter(path);
 		reporter.config().setReportName("Wally Automation Report");
-		reporter.config().setDocumentTitle("Wally Report");
-		
-		
+		reporter.config().setDocumentTitle("Wally Report");	
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Tester Name", "Hanmant Pawar");
