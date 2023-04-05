@@ -6,16 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="fleetwally.wally.ForgetPasswordValidation">
-        <methods>
-          <include name="test_3"/>
-          <include name="test_4"/>
-          <include name="initializeDriver"/>
-          <include name="closeBrowser"/>
-          <include name="test_2"/>
-          <include name="createobject"/>
-        </methods>
-      </class> <!-- fleetwally.wally.ForgetPasswordValidation -->
       <class name="fleetwally.wally.LoginDetailsValidation">
         <methods>
           <include name="initializeDriver"/>
@@ -24,6 +14,14 @@
           <include name="LoginErrorMessage" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- fleetwally.wally.LoginDetailsValidation -->
+      <class name="fleetwally.wally.ForgetPasswordValidation">
+        <methods>
+          <include name="test_1"/>
+          <include name="initializeDriver"/>
+          <include name="closeBrowser"/>
+          <include name="createobject"/>
+        </methods>
+      </class> <!-- fleetwally.wally.ForgetPasswordValidation -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [WallySuite] -->

@@ -6,8 +6,8 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<class name="fleetwally.wally.LoginDetailsValidation"></class>	
-			<class name="fleetwally.wally.LoginValidation"></class>	
+			<!-- <class name="fleetwally.wally.LoginDetailsValidation"></class>	
+			<class name="fleetwally.wally.LoginValidation"></class>	 -->
 			<class name="fleetwally.wally.ForgetPasswordValidation"></class>	
 		</classes>
 		

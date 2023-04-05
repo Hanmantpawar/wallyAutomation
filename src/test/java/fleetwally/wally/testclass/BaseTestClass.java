@@ -28,7 +28,7 @@ public class BaseTestClass {
 	public signout signoutApp;
 	public SignupPage sp;
 	public ForgetPassword forg_pass;
-	public Properties prop_neg;
+	
 
 	@BeforeSuite 
 	public WebDriver initializeDriver() throws IOException {
@@ -38,7 +38,7 @@ public class BaseTestClass {
 				path + "\\src\\main\\java\\fleetwally\\wally\\resources\\GlobalData.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
-		prop_neg = new Properties();
+		Properties prop_neg = new Properties();
 		String path_neg = System.getProperty("user.dir");
 		FileInputStream neg = new FileInputStream(
 				path_neg + "\\src\\main\\java\\fleetwally\\wally\\resources\\Neg_Case_Data.properties");
