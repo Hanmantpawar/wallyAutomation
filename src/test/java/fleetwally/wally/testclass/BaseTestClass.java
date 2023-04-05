@@ -1,9 +1,11 @@
 package fleetwally.wally.testclass;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,8 +17,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+
 import fleetwally.wally.ForgetPassword;
-import fleetwally.wally.LoginDetailsValidation;
 import fleetwally.wally.SignupPage;
 import fleetwally.wally.loginPage;
 import fleetwally.wally.signout;
@@ -28,22 +30,37 @@ public class BaseTestClass {
 	public signout signoutApp;
 	public SignupPage sp;
 	public ForgetPassword forg_pass;
-	
+	public Properties prop;
+	public Properties prop_neg;
 
-	@BeforeSuite 
-	public WebDriver initializeDriver() throws IOException {
-		Properties prop = new Properties();
+	public BaseTestClass() {
+		prop = new Properties();
+		prop_neg = new Properties();
 		String path = System.getProperty("user.dir");
+		String path_neg = System.getProperty("user.dir");
+		try {
 		FileInputStream fis = new FileInputStream(
 				path + "\\src\\main\\java\\fleetwally\\wally\\resources\\GlobalData.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
-		Properties prop_neg = new Properties();
-		String path_neg = System.getProperty("user.dir");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		try {
+		// property file for negative data
 		FileInputStream neg = new FileInputStream(
 				path_neg + "\\src\\main\\java\\fleetwally\\wally\\resources\\Neg_Case_Data.properties");
 		prop_neg.load(neg);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 
+	@BeforeSuite
+	public WebDriver initializeDriver() throws IOException {
+		
+		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeopt = new ChromeOptions();
@@ -54,8 +71,7 @@ public class BaseTestClass {
 			chromeopt.merge(dc);
 			driver = new ChromeDriver(chromeopt);
 
-		}
-		if (browserName.equalsIgnoreCase("firefox")) {
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
@@ -78,15 +94,15 @@ public class BaseTestClass {
 
 	@BeforeClass
 	public void createobject() {
-		
+
 		logpag = new loginPage(driver);
 		signoutApp = new signout(driver);
-		//sp = new SignupPage(driver);
+		// sp = new SignupPage(driver);
 		forg_pass = new ForgetPassword(driver);
 	}
 
 	@AfterSuite
 	public void closeBrowser() {
-	//driver.quit();
+		driver.quit();
 	}
 }

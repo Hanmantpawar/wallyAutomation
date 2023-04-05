@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ForgetPassword {
-	WebDriver driver;
+	public WebDriver driver;
 
 	// Page Factory initialization
 	public ForgetPassword(WebDriver driver) {

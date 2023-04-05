@@ -14,14 +14,6 @@
           <include name="LoginErrorMessage" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- fleetwally.wally.LoginDetailsValidation -->
-      <class name="fleetwally.wally.ForgetPasswordValidation">
-        <methods>
-          <include name="test_1"/>
-          <include name="initializeDriver"/>
-          <include name="closeBrowser"/>
-          <include name="createobject"/>
-        </methods>
-      </class> <!-- fleetwally.wally.ForgetPasswordValidation -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [WallySuite] -->
