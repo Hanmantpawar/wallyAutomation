@@ -23,6 +23,6 @@ public class signout {
 		Thread.sleep(5000);
 		logoutButton.click();
 		yesButton.click();
-		driver.get("https://wallyax.com/login/");
+		driver.get("https://app.wallyax.com/login");
 	}
 }

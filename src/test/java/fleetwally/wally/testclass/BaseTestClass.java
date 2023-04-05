@@ -1,23 +1,24 @@
 package fleetwally.wally.testclass;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
-import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
+import fleetwally.wally.ForgetPassword;
 import fleetwally.wally.SignupPage;
 import fleetwally.wally.loginPage;
 import fleetwally.wally.signout;
@@ -27,22 +28,50 @@ public class BaseTestClass {
 	public static WebDriver driver;
 	public loginPage logpag;
 	public signout signoutApp;
-	public SignupPage sp; 
-	
-@BeforeSuite
-	public WebDriver initalizeDriver() throws IOException {
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(
-		"C:\\Users\\Fleet Studio-21\\eclipse-workspace\\wally\\src\\main\\java\\fleetwally\\wally\\resources\\GlobalData.properties");
-		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+	public SignupPage sp;
+	public ForgetPassword forg_pass;
+	public Properties prop;
+	public Properties prop_neg;
 
+	public BaseTestClass() {
+		prop = new Properties();
+		prop_neg = new Properties();
+		String path = System.getProperty("user.dir");
+		String path_neg = System.getProperty("user.dir");
+		try {
+		FileInputStream fis = new FileInputStream(
+				path + "\\src\\main\\java\\fleetwally\\wally\\resources\\GlobalData.properties");
+		prop.load(fis);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		try {
+		// property file for negative data
+		FileInputStream neg = new FileInputStream(
+				path_neg + "\\src\\main\\java\\fleetwally\\wally\\resources\\Neg_Case_Data.properties");
+		prop_neg.load(neg);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@BeforeSuite
+	public WebDriver initializeDriver() throws IOException {
+		
+		String browserName = prop.getProperty("browser");
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions chromeopt = new ChromeOptions();
+			chromeopt.addArguments("--remote-allow-origins=*");
+			// chromeopt.addArguments("--disable notifications");
+			DesiredCapabilities dc = new DesiredCapabilities();
+			dc.setCapability(ChromeOptions.CAPABILITY, chromeopt);
+			chromeopt.merge(dc);
+			driver = new ChromeDriver(chromeopt);
 
-		}
-		if (browserName.equalsIgnoreCase("firefox")) {
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
@@ -63,16 +92,17 @@ public class BaseTestClass {
 		return System.getProperty("user.dir") + "//reports//" + TestCaseName + ".png";
 	}
 
-	@BeforeClass 
+	@BeforeClass
 	public void createobject() {
-		
+
 		logpag = new loginPage(driver);
 		signoutApp = new signout(driver);
-		sp = new SignupPage(driver);
+		// sp = new SignupPage(driver);
+		forg_pass = new ForgetPassword(driver);
 	}
-	
+
 	@AfterSuite
 	public void closeBrowser() {
-	//	driver.quit();
+		driver.quit();
 	}
 }

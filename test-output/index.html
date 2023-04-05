@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-WallySuite" class="navigator-link">
-              <span class="suite-name border-skipped">WallySuite</span>
+              <span class="suite-name border-failed">WallySuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-WallySuite" class="navigator-link ">
-                    <span>C:\Users\Fleet Studio-21\eclipse-workspace\wally\testng.xml</span>
+                    <span>C:\Users\FleetStudio-19\git\wallyAutomation\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,31 +93,55 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,  3 skipped,  </span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-WallySuite" class="hide-methods skipped suite-WallySuite"> (hide)</a> <!-- hide-methods skipped suite-WallySuite -->
-                      <a href="#" panel-name="suite-WallySuite" class="show-methods skipped suite-WallySuite"> (show)</a> <!-- show-methods skipped suite-WallySuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-WallySuite" class="hide-methods failed suite-WallySuite"> (hide)</a> <!-- hide-methods failed suite-WallySuite -->
+                      <a href="#" panel-name="suite-WallySuite" class="show-methods failed suite-WallySuite"> (show)</a> <!-- show-methods failed suite-WallySuite -->
                     </span>
-                    <div class="method-list-content skipped suite-WallySuite">
+                    <div class="method-list-content failed suite-WallySuite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginDetailsValidation" class="method navigator-link" hash-for-method="LoginErrorMessage({pass=Hanmant@369, Email=hanmant@fleetstudio.com})">LoginErrorMessage({pass=Hanmant@369, Email=hanmant@fleetstudio.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginDetailsValidation" class="method navigator-link" hash-for-method="LoginErrorMessage({pass=Hanmant@12345, Email=hpawar@fleetstudio.com})">LoginErrorMessage({pass=Hanmant@12345, Email=hpawar@fleetstudio.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginDetailsValidation" class="method navigator-link" hash-for-method="LoginErrorMessage({pass=vipul@23651, Email=vipul@fleetstudio.com})">LoginErrorMessage({pass=vipul@23651, Email=vipul@fleetstudio.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-WallySuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-WallySuite" class="hide-methods passed suite-WallySuite"> (hide)</a> <!-- hide-methods passed suite-WallySuite -->
+                      <a href="#" panel-name="suite-WallySuite" class="show-methods passed suite-WallySuite"> (show)</a> <!-- show-methods passed suite-WallySuite -->
+                    </span>
+                    <div class="method-list-content passed suite-WallySuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginValidation" class="method navigator-link" hash-for-method="LoginApplication">LoginApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginValidation" class="method navigator-link" hash-for-method="logout">logout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.LoginValidation" class="method navigator-link" hash-for-method="singupApplication({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpa...)">singupApplication({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpa...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-WallySuite" title="fleetwally.wally.ForgetPasswordValidation" class="method navigator-link" hash-for-method="test_1">test_1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-WallySuite -->
+                    </div> <!-- method-list-content passed suite-WallySuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,9 +153,140 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-WallySuite" class="panel WallySuite">
-          <div class="suite-WallySuite-class-skipped">
+          <div class="suite-WallySuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
+              <span class="class-name">fleetwally.wally.LoginDetailsValidation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginErrorMessage({pass=Hanmant@369, Email=hanmant@fleetstudio.com})">
+                  </a> <!-- LoginErrorMessage({pass=Hanmant@369, Email=hanmant@fleetstudio.com}) -->
+                  <span class="method-name">LoginErrorMessage</span>
+                  <span class="parameters">({pass=Hanmant@369, Email=hanmant@fleetstudio.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;text-sm text-left text-black font-light&apos;]&quot;}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [522d268ea716df04d3b0f96e83d74fae, findElement {using=xpath, value=//*[@class=&apos;text-sm text-left text-black font-light&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\FLEETS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52199}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52199/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 522d268ea716df04d3b0f96e83d74fae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getText(Unknown Source)
+	at fleetwally.wally.loginPage.ErrorMessage(loginPage.java:34)
+	at fleetwally.wally.LoginDetailsValidation.LoginErrorMessage(LoginDetailsValidation.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginErrorMessage({pass=Hanmant@12345, Email=hpawar@fleetstudio.com})">
+                  </a> <!-- LoginErrorMessage({pass=Hanmant@12345, Email=hpawar@fleetstudio.com}) -->
+                  <span class="method-name">LoginErrorMessage</span>
+                  <span class="parameters">({pass=Hanmant@12345, Email=hpawar@fleetstudio.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;text-sm text-left text-black font-light&apos;]&quot;}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [522d268ea716df04d3b0f96e83d74fae, findElement {using=xpath, value=//*[@class=&apos;text-sm text-left text-black font-light&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\FLEETS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52199}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52199/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 522d268ea716df04d3b0f96e83d74fae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getText(Unknown Source)
+	at fleetwally.wally.loginPage.ErrorMessage(loginPage.java:34)
+	at fleetwally.wally.LoginDetailsValidation.LoginErrorMessage(LoginDetailsValidation.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginErrorMessage({pass=vipul@23651, Email=vipul@fleetstudio.com})">
+                  </a> <!-- LoginErrorMessage({pass=vipul@23651, Email=vipul@fleetstudio.com}) -->
+                  <span class="method-name">LoginErrorMessage</span>
+                  <span class="parameters">({pass=vipul@23651, Email=vipul@fleetstudio.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;text-sm text-left text-black font-light&apos;]&quot;}
+  (Session info: chrome=111.0.5563.147)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [522d268ea716df04d3b0f96e83d74fae, findElement {using=xpath, value=//*[@class=&apos;text-sm text-left text-black font-light&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\FLEETS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52199}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52199/devtoo..., se:cdpVersion: 111.0.5563.147, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 522d268ea716df04d3b0f96e83d74fae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.getText(Unknown Source)
+	at fleetwally.wally.loginPage.ErrorMessage(loginPage.java:34)
+	at fleetwally.wally.LoginDetailsValidation.LoginErrorMessage(LoginDetailsValidation.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-WallySuite-class-failed -->
+          <div class="suite-WallySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">fleetwally.wally.ForgetPasswordValidation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test_1">
+                  </a> <!-- test_1 -->
+                  <span class="method-name">test_1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-WallySuite-class-passed -->
+          <div class="suite-WallySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">fleetwally.wally.LoginValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -140,22 +295,6 @@
                   <a name="LoginApplication">
                   </a> <!-- LoginApplication -->
                   <span class="method-name">LoginApplication</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:53064/devtools/browser/f7060b0f-02b1-46df-aacb-688381fd3a2e
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at fleetwally.wally.testclass.BaseTestClass.initalizeDriver(BaseTestClass.java:42)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -163,54 +302,14 @@ Driver info: driver.version: ChromeDriver
                   <a name="logout">
                   </a> <!-- logout -->
                   <span class="method-name">logout</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:53064/devtools/browser/f7060b0f-02b1-46df-aacb-688381fd3a2e
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at fleetwally.wally.testclass.BaseTestClass.initalizeDriver(BaseTestClass.java:42)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="singupApplication({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpa...)">
-                  </a> <!-- singupApplication({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpa...) -->
-                  <span class="method-name">singupApplication</span>
-                  <span class="parameters">({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpawar+1@fleetstudio.com })</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:53064/devtools/browser/f7060b0f-02b1-46df-aacb-688381fd3a2e
-Build info: version: &apos;4.7.2&apos;, revision: &apos;4d4020c3b7&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at fleetwally.wally.testclass.BaseTestClass.initalizeDriver(BaseTestClass.java:42)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-WallySuite-class-skipped -->
+          </div> <!-- suite-WallySuite-class-passed -->
         </div> <!-- panel WallySuite -->
         <div panel-name="test-xml-WallySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Fleet Studio-21\eclipse-workspace\wally\testng.xml</span>
+            <span class="header-content">C:\Users\FleetStudio-19\git\wallyAutomation\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -222,7 +321,9 @@ Driver info: driver.version: ChromeDriver
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;fleetwally.wally.LoginDetailsValidation&quot;/&gt;
       &lt;class name=&quot;fleetwally.wally.LoginValidation&quot;/&gt;
+      &lt;class name=&quot;fleetwally.wally.ForgetPasswordValidation&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- WallySuite --&gt;
@@ -236,7 +337,7 @@ Driver info: driver.version: ChromeDriver
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -262,24 +363,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginApplication')
-data.setCell(0, 2, 'fleetwally.wally.LoginValidation')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'LoginErrorMessage')
+data.setCell(0, 2, 'fleetwally.wally.LoginDetailsValidation')
+data.setCell(0, 3, 17320);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'singupApplication')
-data.setCell(1, 2, 'fleetwally.wally.LoginValidation')
-data.setCell(1, 3, 0);
+data.setCell(1, 1, 'LoginErrorMessage')
+data.setCell(1, 2, 'fleetwally.wally.LoginDetailsValidation')
+data.setCell(1, 3, 16760);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logout')
-data.setCell(2, 2, 'fleetwally.wally.LoginValidation')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'LoginErrorMessage')
+data.setCell(2, 2, 'fleetwally.wally.LoginDetailsValidation')
+data.setCell(2, 3, 16705);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'logout')
+data.setCell(3, 2, 'fleetwally.wally.LoginValidation')
+data.setCell(3, 3, 7562);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'LoginApplication')
+data.setCell(4, 2, 'fleetwally.wally.LoginValidation')
+data.setCell(4, 3, 5396);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'test_1')
+data.setCell(5, 2, 'fleetwally.wally.ForgetPasswordValidation')
+data.setCell(5, 3, 5012);
 window.suiteTableData['WallySuite']= { tableData: data, tableDiv: 'times-div-WallySuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-WallySuite">
               </div> <!-- times-div-WallySuite -->
             </div> <!-- times-div -->
@@ -294,9 +407,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-WallySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">fleetwally.wally.ForgetPasswordValidation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initializeDriver</span>
+                <br/>
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">fleetwally.wally.LoginValidation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">initializeDriver</span>
+                <br/>
+                <span class="ignored-method-name">closeBrowser</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-WallySuite" class="panel">
@@ -305,32 +436,65 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">fleetwally.wally.LoginValidation</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">fleetwally.wally.LoginDetailsValidation</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">initalizeDriver</span>
+                <span class="method-name">initializeDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">createobject</span>
-                <span class="method-start">3049 ms</span>
+                <span class="method-start">5421 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginErrorMessage({pass=Hanmant@12345, Email=hpawar@fleetstudio.com})</span>
+                <span class="method-start">5481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginErrorMessage({pass=Hanmant@369, Email=hanmant@fleetstudio.com})</span>
+                <span class="method-start">22481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LoginErrorMessage({pass=vipul@23651, Email=vipul@fleetstudio.com})</span>
+                <span class="method-start">40006 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fleetwally.wally.LoginValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">createobject</span>
+                <span class="method-start">56907 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">LoginApplication</span>
-                <span class="method-start">3077 ms</span>
+                <span class="method-start">56909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">logout</span>
-                <span class="method-start">3098 ms</span>
+                <span class="method-start">62312 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fleetwally.wally.ForgetPasswordValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">createobject</span>
+                <span class="method-start">69880 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">singupApplication({First Name=Hanmant , Compamy=Fleet Studio Technology, Last Name=Pawar , phone=9876543210, email=hpa...)</span>
-                <span class="method-start">3114 ms</span>
+                <span class="method-name">test_1</span>
+                <span class="method-start">69882 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fleetwally.wally.LoginDetailsValidation</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">3755 ms</span>
+                <span class="method-start">75862 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

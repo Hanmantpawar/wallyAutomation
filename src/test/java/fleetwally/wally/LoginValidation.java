@@ -1,8 +1,6 @@
 package fleetwally.wally;
-
 import java.io.IOException;
 import java.util.HashMap;
-
 import org.apache.hc.core5.reactor.Command.Priority;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -12,12 +10,6 @@ import fleetwally.wally.testclass.BaseTestClass;
 
 public class LoginValidation extends BaseTestClass {
 	
-
-//	@Test(priority = 1, dataProvider = "hashmapdata")
-	// from data provider data
-	// public void LoginErrorMessage(String userName, String password) throws
-	// IOException {
-
 	public void LoginErrorMessage(HashMap<String, String> input) throws IOException, InterruptedException {
 		logpag.loginApplication(input.get("Email"), input.get("pass"));
 		String expectedResult = "Incorrect Credentials. Please try again";
@@ -25,7 +17,7 @@ public class LoginValidation extends BaseTestClass {
 		Assert.assertEquals(expectedResult, actualResult);
 
 	}
-	@Test (priority = 3,dataProvider ="SignupData" )
+	//@Test (priority = 3,dataProvider ="SignupData" )
 	public void singupApplication(HashMap<String, String>inputData) throws InterruptedException {
 		sp.SignupFunction(inputData.get("First Name"),
 				inputData.get("Last Name"),
@@ -67,6 +59,16 @@ public class LoginValidation extends BaseTestClass {
 	 */
 
 	/* Using HashMap sending user login details */
+	
+/*	
+	
+	@Test(priority = 1, dataProvider = "hashmapdata")
+//	 from data provider data
+	 public void LoginErrorMessage(String userName, String password) throws
+	 IOException, InterruptedException {
+		logpag.loginApplication(userName, password);
+		
+	}
 	@DataProvider
 	public Object[][] hashmapdata() {
 		// correct user name & incorrect password
@@ -85,5 +87,5 @@ public class LoginValidation extends BaseTestClass {
 		return new Object[][] { { map }, { map1 }, { map2 } };
 
 	}
-
+*/
 }

@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="fleetwally.wally.LoginValidation">
+      <class name="fleetwally.wally.ForgetPasswordValidation">
         <methods>
-          <include name="LoginApplication"/>
+          <include name="test_1"/>
+          <include name="initializeDriver"/>
           <include name="closeBrowser"/>
-          <include name="initalizeDriver"/>
-          <include name="singupApplication" invocation-numbers="0"/>
           <include name="createobject"/>
-          <include name="logout"/>
         </methods>
-      </class> <!-- fleetwally.wally.LoginValidation -->
+      </class> <!-- fleetwally.wally.ForgetPasswordValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
